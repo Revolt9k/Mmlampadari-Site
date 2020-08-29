@@ -38,7 +38,7 @@
     $(button).on("click", function(event) {
         event.preventDefault();
         growingItem.toggleClass("hidden")
-        button.toggleClass("rotate")
+        button.toggleClass("reverse")
     })
 
          /* Pop Up */

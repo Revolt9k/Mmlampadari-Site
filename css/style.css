@@ -426,11 +426,19 @@ display: none;
     width: 85px;
     background-color: #fff;
 
+
 }
 
-.rotated {
-    transform: rotate(45deg)
+.quotes_button img{
+    transition: all .2s linear;
 }
+
+
+.reverse img{
+    transition: all .2s linear;
+    transform: scale(1, -1)
+}
+
 
 
 .quotes_title_main {
