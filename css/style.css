@@ -341,25 +341,36 @@ display: none;
 /*=====================Slider=====================*/
 
 
-.slider {
+.main {
     height: 83vh;
-    background: url(../img/bg.jpg) center no-repeat;
-    background-size: cover;
+
     position: relative;
     overflow: hidden;
 }
 
-.slider_item {
+.slider {
+    height: 83vh;
+    display: flex;
+    justify-content: flex-end
+}
 
+.slider_item {
+        background: url(../img/bg.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+        display: flex;
+    justify-content: flex-end
 }
 
 .slider_info {
     padding: 0px 20px 15px 15px;
-    position: absolute;
+    position: relative;
     width: 510px;
     height: 140px;
     right: 0;
     top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(255,255,255,.5)
 
 
@@ -377,17 +388,9 @@ display: none;
 }
 
 
-
-
 .quotes {
-    height: 83vh;
-    overflow: hidden;
-
-}
-
-.growingBlock {
     max-height: 300px;
-    margin-right: 20px;
+    margin: 0 20px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -398,6 +401,7 @@ display: none;
 
 
 
+
 .quotes_item {
     padding: 0 15px 5px 15px;
     width: 33.33333%;
@@ -405,10 +409,10 @@ display: none;
 
 }
 
+
 .hidden {
     max-height: 0;
 }
-
 
 
 .quotes_item_author_first {

@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <!--   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Some New Project</title>
     <link rel="stylesheet" href="css/style.css"> </head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 <body>
     <header class="header">
@@ -28,35 +29,33 @@
             </div>
         </div>
     </header>
-    <section class="slider" id="slider">
-        <div class="container">
-            <div class="slider_item slider_item_first">
-                <div class="slider_info">
-                    <h2 class="slider_info_title">Lampadari contemporanei</h2>
-                    <div class="slider_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </div>
-                </div>
-                <div class="quotes">
-                    <div class="growingBlock" id="growing_item">
-                        <div class="quotes_item quotes_item_first ">
-                            <h3 class="quotes_title">Stai pensando ad un <br>progetto?</h3>
-                            <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-                            <div class="quotes_item_author quotes_item_author_first">Approfondisci</div>
-                        </div>
-                        <div class="quotes_item quotes_item_main">
-                            <button class="quotes_button" id="growing_button"><img src="./img/arrow_up.png" alt=""></button>
-                            <h3 class="quotes_title_main">Vi aspettiamo all fiera <br>Euroluce</h3>
-                            <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-                            <div class="quotes_item_author ">Approfondisci</div>
-                        </div>
-                        <div class="quotes_item quotes_item_last">
-                            <h3 class="quotes_title">Scorpi la nuova <br> collezione</h3>
-                            <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-                            <div class="quotes_item_author">Approfondisci</div>
-                        </div>
+    <section class="main" id="slider">
+            <div class="slider">
+                <div class="slider_item">
+                    <div class="slider_info">
+                        <h2 class="slider_info_title">Lampadari contemporanei</h2>
+                        <div class="slider_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="quotes" id="growing_item">
+                <div class="quotes_item quotes_item_first ">
+                    <h3 class="quotes_title">Stai pensando ad un <br>progetto?</h3>
+                    <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                    <div class="quotes_item_author quotes_item_author_first">Approfondisci</div>
+                </div>
+                <div class="quotes_item quotes_item_main">
+                    <button class="quotes_button" id="growing_button"><img src="./img/arrow_up.png" alt=""></button>
+                    <h3 class="quotes_title_main">Vi aspettiamo all fiera <br>Euroluce</h3>
+                    <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                    <div class="quotes_item_author ">Approfondisci</div>
+                </div>
+                <div class="quotes_item quotes_item_last">
+                    <h3 class="quotes_title">Scorpi la nuova <br> collezione</h3>
+                    <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                    <div class="quotes_item_author">Approfondisci</div>
+                </div>
+            </div>
     </section>
     <section class="footer">
         <div class="footer_inner">
@@ -86,24 +85,12 @@
         </div>
     </section>
     <footer class="bottom_line">
-        <div class="feedback">
-        <span class="feedback_item">MMLAMPADARI srl</span>
-        <span class="feedback_item">Via Feltrina 00</span>
-        <span class="feedback_item">31111 Pederobba  (TV)</span>
-        <span class="feedback_item"> 0423.123456</span>
-        <span class="feedback_item">info@mmlampadari.mm</span>
-        <span class="feedback_item">P.IVA 04123456789</span>
-        </div>
-        <div class="languages">
-        <span class="languages_item">ita</span>
-        <span class="languages_item">eng</span>
-        <span class="languages_item">deu</span>
-        <span class="languages_item">pyc</span>
-        </div>
+        <div class="feedback"> <span class="feedback_item">MMLAMPADARI srl</span> <span class="feedback_item">Via Feltrina 00</span> <span class="feedback_item">31111 Pederobba  (TV)</span> <span class="feedback_item"> 0423.123456</span> <span class="feedback_item">info@mmlampadari.mm</span> <span class="feedback_item">P.IVA 04123456789</span> </div>
+        <div class="languages"> <span class="languages_item">ita</span> <span class="languages_item">eng</span> <span class="languages_item">deu</span> <span class="languages_item">pyc</span> </div>
     </footer>
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/script.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
