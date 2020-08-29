@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Some New Project</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/style.css"> </head>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 <body>
     <header class="header">
@@ -16,7 +16,7 @@
                 <div class="logo"><img src="img/logo.png" alt=""></div>
                 <div class="navigation">
                     <div class="popup"> <span class="popup_text">Area Riservata</span> <span class="popup_icon"><img src="img/lock.png" alt=""></span> </div>
-                    <!--                    <div id="popUp">asd</div>-->
+<!--                    <div class="popUp" id="popUp">Pop Up CONTENT</div>-->
                     <nav class="nav"> <span class="nav_item"> <a href="">Home</a>  </span> <span class="nav_item" id="dropdown_link"> <a href="">Azienda</a> <div class="dropdown" id="dropdown_toggle">
                         <ul class="dropdown_list">
                             <li class="dropdown_item"><a href="">Storia</a></li>
@@ -29,33 +29,34 @@
             </div>
         </div>
     </header>
-    <section class="main" id="slider">
-            <div class="slider">
-                <div class="slider_item">
-                    <div class="slider_info">
-                        <h2 class="slider_info_title">Lampadari contemporanei</h2>
-                        <div class="slider_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </div>
-                    </div>
-                </div>
+    <section class="gallery">
+        <div class="slider_info">
+            <h2 class="slider_info_title">Lampadari contemporanei</h2>
+            <div class="slider_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </div>
+        </div>
+        <div id="slider">
+            <div class="slick-slide first_slide"> </div>
+            <div class="slick-slide second_slide"> </div>
+            <div class="slick-slide third_slide"> </div>
+        </div>
+        <div class="quotes" id="growing_item">
+            <div class="quotes_item quotes_item_first ">
+                <h3 class="quotes_title">Stai pensando ad un <br>progetto?</h3>
+                <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                <div class="quotes_item_author quotes_item_author_first">Approfondisci</div>
             </div>
-            <div class="quotes" id="growing_item">
-                <div class="quotes_item quotes_item_first ">
-                    <h3 class="quotes_title">Stai pensando ad un <br>progetto?</h3>
-                    <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-                    <div class="quotes_item_author quotes_item_author_first">Approfondisci</div>
-                </div>
-                <div class="quotes_item quotes_item_main">
-                    <button class="quotes_button" id="growing_button"><img src="./img/arrow_up.png" alt=""></button>
-                    <h3 class="quotes_title_main">Vi aspettiamo all fiera <br>Euroluce</h3>
-                    <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-                    <div class="quotes_item_author ">Approfondisci</div>
-                </div>
-                <div class="quotes_item quotes_item_last">
-                    <h3 class="quotes_title">Scorpi la nuova <br> collezione</h3>
-                    <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-                    <div class="quotes_item_author">Approfondisci</div>
-                </div>
+            <div class="quotes_item quotes_item_main">
+                <button class="quotes_button" id="growing_button"><img src="./img/arrow_up.png" alt=""></button>
+                <h3 class="quotes_title_main">Vi aspettiamo all fiera <br>Euroluce</h3>
+                <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                <div class="quotes_item_author ">Approfondisci</div>
             </div>
+            <div class="quotes_item quotes_item_last">
+                <h3 class="quotes_title">Scorpi la nuova <br> collezione</h3>
+                <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                <div class="quotes_item_author">Approfondisci</div>
+            </div>
+        </div>
     </section>
     <section class="footer">
         <div class="footer_inner">
