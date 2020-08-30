@@ -8,8 +8,6 @@ a {
     background-color: transparent;
 }
 
-
-
 address {
     font-style: normal;
 }
@@ -69,11 +67,7 @@ textarea {
     overflow: auto;
 }
 
-[type="checkbox"],
-[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-}
+
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
@@ -630,6 +624,10 @@ fieldset {
     margin: 0 30px;
 }
 
+
+
+
+
 .footer_item_title {
     margin: 38px 0 26px 0;
     font-family: 'Playfair Display', serif;
@@ -662,11 +660,11 @@ fieldset {
     font-size: 14px;
 }
 
-.footer_radio {
+.footer_checkbox {
     margin: 10px 0;
 }
 
-.radio_text {
+.checkbox_text {
     position: relative;
     color: #b5b4b4;
     font-size: 10px;
@@ -809,14 +807,22 @@ fieldset {
         margin: 0 5px;
     }
     .footer_form {
+
         width: auto;
+    }
+    .subscribe {
+        text-align: center;
+    }
+
+    .social {
+        left: 39%;
     }
     .radio_text {
         max-width: 30px;
         height: auto;
     }
     .bottom_line {
-        padding: 50px 20px 20px 20px
+        padding: 80px 20px 20px 20px
     }
 }
 

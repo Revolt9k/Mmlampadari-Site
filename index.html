@@ -5,7 +5,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-
     <title>MM Lampadari</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/style.css"> </head>
@@ -27,14 +26,17 @@
             </div>
             <nav class="nav_group">
                 <div class="popup_group"> <span class="popup_text" id="popup_button">Area Riservata</span> <span class="popup_icon"><img src="img/lock.png" alt=""></span> </div>
-                <nav class="nav"> <span class="nav_item nav_item_acive"> <a href="#1"  >Home</a>  </span> <div class="nav_item" id="dropdown_link"> <a href="#2">Azienda</a> <div class="dropdown" id="dropdown_toggle">
-                        <ul class="dropdown_list" id="dropdown_inner">
-                            <li class="dropdown_item"><a href="#3">Storia</a></li>
-                            <li class="dropdown_item dropdown_item_active"><a href="" >MM Design</a></li>
-                            <li class="dropdown_item"><a href="">Designer</a></li>
-                            <li class="dropdown_item"><a href="">Certificazioni</a></li>
-                        </ul>
-                    </div></div> <span class="nav_item"> <a href="">Collezioni</a></span> <span class="nav_item"><a href="">News</a></span> <span class="nav_item"><a href="">Contatti</a></span> </nav>
+                <nav class="nav"> <span class="nav_item nav_item_acive"> <a href="#1"  >Home</a>  </span>
+                    <div class="nav_item" id="dropdown_link"> <a href="#2">Azienda</a>
+                        <div class="dropdown" id="dropdown_toggle">
+                            <ul class="dropdown_list" id="dropdown_inner">
+                                <li class="dropdown_item"><a href="#3">Storia</a></li>
+                                <li class="dropdown_item dropdown_item_active"><a href="">MM Design</a></li>
+                                <li class="dropdown_item"><a href="">Designer</a></li>
+                                <li class="dropdown_item"><a href="">Certificazioni</a></li>
+                            </ul>
+                        </div>
+                    </div> <span class="nav_item"> <a href="">Collezioni</a></span> <span class="nav_item"><a href="">News</a></span> <span class="nav_item"><a href="">Contatti</a></span> </nav>
                 <nav class="burger" id="burger_button">
                     <div class="burger_item">
                         <div class="dropdown_burger" id="dropdown_burger">
@@ -70,7 +72,7 @@
             <div class="slick-slide second_slide"> </div>
             <div class="slick-slide third_slide"> </div>
         </section>
-        <section class="quotes" id="growing_item">
+        <section class="quotes hidden" id="growing_item">
             <article class="quotes_item quotes_item_first ">
                 <h3 class="quotes_title">Stai pensando ad un progetto?</h3>
                 <p class="quotes_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p> <span class="quotes_item_author quotes_item_author_first">Approfondisci</span> </article>
@@ -98,13 +100,16 @@
                     <h4 class="footer_item_title">45 anni di esperienza</h4>
                     <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
                 </article>
-                <fieldset class="footer_item">
+
+
+                <section class="footer_item subscribe">
                     <h4 class="footer_item_title">Newsletter</h4>
-                    <form class="footer_form" action="none">
+                    <form class="footer_form" action="">
                         <input class="footer_input" type="text" placeholder="Nome e Cognome">
                         <input class="footer_input" type="text" placeholder="Email">
                         <br>
-                        <input class="footer_radio" type="radio"> <span class="radio_text">Acconsento al trattaamento dei dati</span>
+                        <input id="footer_checkbox" name="footer_checkbox" class="footer_checkbox" type="checkbox">
+                        <label for="footer_checkbox"><span class="checkbox_text">Acconsento al trattaamento dei dati</span> </label>
                         <button class="footer_button">Iscriviti</button>
                     </form>
                     <div class="social">
@@ -112,7 +117,7 @@
                         <a href=""><img class="social_icon" src="img/social/insta.png" alt="Instagram"></a>
                         <a href=""><img class="social_icon" src="img/social/pinterest.png" alt="Pinterest"></a>
                     </div>
-                </fieldset>
+                </section>
             </div>
         </section>
         <section class="bottom_line">
@@ -120,6 +125,7 @@
             <div class="languages"> <span class="languages_item">ita</span> <span class="languages_item">eng</span> <span class="languages_item">deu</span> <span class="languages_item">pyc</span> </div>
         </section>
     </footer>
+
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
