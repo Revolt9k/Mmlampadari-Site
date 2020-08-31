@@ -17,79 +17,8 @@ img {
 }
 
 button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-}
-
-button,
-input {
-    overflow: visible;
-}
-
-button,
-select {
-    text-transform: none;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type="button"] {
     -webkit-appearance: button;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
-
-fieldset {
-    padding: 0.35em 0.75em 0.625em;
-}
-
-textarea {
-    overflow: auto;
-}
-
-
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-[type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-}
-
-[hidden] {
-    display: none;
 }
 
 html,
@@ -105,6 +34,15 @@ body {
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+fieldset {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 
@@ -135,11 +73,6 @@ body {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-}
-
-.nav_group a {
-    color: #fff;
-    text-decoration: none;
 }
 
 .popup_group {
@@ -225,10 +158,9 @@ body {
     text-decoration: underline;
 }
 
-.nav_item_acive a {
+.menu_link_active {
     color: #e2d1a6;
 }
-
 
 .nav_item:last-child {
     padding: 0 0 0 14px;
@@ -298,12 +230,13 @@ body {
 }
 
 
-/*========/Dropdown menu===========*/
+/*========/dropdown menu===========*/
 
 
 /*========Burger menu===========*/
 
 .burger {
+    cursor: pointer;
     display: none;
     justify-content: flex-end;
     margin: 50px 0 0 0;
@@ -311,16 +244,17 @@ body {
     padding: 9px 2px;
 }
 
-.burger_item {
+.burger_line {
     display: block;
     width: 30px;
-    height: 3px;
+    height: 6px;
     background-color: #fff;
     position: relative;
+    border-radius: 15px;
 }
 
-.burger_item:before,
-.burger_item:after {
+.burger_line:before,
+.burger_line:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -328,17 +262,19 @@ body {
     left: 0;
     z-index: 1;
     background-color: #fff;
+    border-radius: 15px;
 }
 
-.burger_item:before {
+.burger_line:before {
     top: -8px;
 }
 
-.burger_item:after {
+.burger_line:after {
     bottom: -8px;
 }
 
 .dropdown_burger {
+    transform: translateY(-100px);
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -381,10 +317,11 @@ body {
 
 /*========Burger Dropdown menu===========*/
 
-.second_dropdown {
+.burger_inner_dropdown {
     border-right: 1px solid black;
     transition: all .2s linear;
     visibility: hidden;
+    transform: translateX(100px);
     opacity: 0;
     min-width: 150px;
     min-height: 155px;
@@ -396,11 +333,11 @@ body {
     left: -170px;
 }
 
-.second_dropdown_item_active a {
+.inner_menu_link_active {
     color: #b4a788
 }
 
-.second_dropdown_list {
+.burger_inner_dropdown_list {
     padding: 12px 0 0 12px;
     list-style: none;
 }
@@ -408,6 +345,13 @@ body {
 .toggleburger {
     visibility: visible;
     opacity: 1;
+    transform: translateY(0)
+}
+
+.toggleinnerburger {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0)
 }
 
 
@@ -460,7 +404,6 @@ body {
 }
 
 .slick-dots button {
-    z-index: 1;
     background: #fff;
     border-radius: 50%;
     width: 15px;
@@ -508,9 +451,9 @@ body {
 /*=====================Quotes=====================*/
 
 .quotes {
+    margin: 0 20px;
     z-index: 4;
     max-height: 323px;
-    margin: 0 20px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -545,12 +488,12 @@ body {
 }
 
 .quotes_button {
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     border: none;
     position: relative;
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
     height: 30px;
     width: 85px;
     background-color: #fff;
@@ -623,10 +566,6 @@ fieldset {
     width: 25%;
     margin: 0 30px;
 }
-
-
-
-
 
 .footer_item_title {
     margin: 38px 0 26px 0;
@@ -766,12 +705,54 @@ fieldset {
 
 /*=====================Adaptive=====================*/
 
+@media (max-width: 4000px) {
+    .quotes_title {
+        font-size: 38px;
+    }
+    .quotes_title_main {
+        font-size: 38px;
+    }
+    .quotes_item_text {
+        font-size: 34px;
+    }
+    .quotes_item_author {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .quotes_title {
+        font-size: 28px;
+    }
+    .quotes_title_main {
+        font-size: 28px;
+    }
+    .quotes_item_text {
+        font-size: 18px;
+    }
+    .quotes_item_author {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 900px) {
     .nav {
         display: none;
     }
     .burger {
         display: flex;
+    }
+    .quotes_title {
+        font-size: 18px;
+    }
+    .quotes_title_main {
+        font-size: 18px;
+    }
+    .quotes_item_text {
+        font-size: 16px;
+    }
+    .quotes_item_author {
+        font-size: 14px;
     }
 }
 
@@ -788,10 +769,10 @@ fieldset {
         padding: 0 10px 5px 10px
     }
     .quotes_title {
-        font-size: 18px;
+        font-size: 16px;
     }
     .quotes_title_main {
-        font-size: 18px;
+        font-size: 16px;
     }
     .quotes_item_text {
         font-size: 14px;
@@ -807,13 +788,11 @@ fieldset {
         margin: 0 5px;
     }
     .footer_form {
-
         width: auto;
     }
     .subscribe {
         text-align: center;
     }
-
     .social {
         left: 39%;
     }
@@ -845,6 +824,9 @@ fieldset {
     .languages_item:last-child {
         padding: 2px;
     }
+    .footer_input:first-child {
+        margin-left: -5px;
+    }
 }
 
 @media (max-width: 465px) {
@@ -874,3 +856,11 @@ fieldset {
 
 /*=====================/adaptive=====================*/
 
+
+/*=====================/Crossbrowser support=====================*/
+
+@-moz-document url-prefix() {
+    .slick-dots li button {
+        height: 20px;
+    }
+}

@@ -26,68 +26,61 @@ $(popup).on("click", function (event) {
     }
 })
 
+/* /PopUp*/
 
-/* DropDown Nav Menu*/
+/*Active state for menu */
 
-let navlink = $("#dropdown_link")
+let addStateObserverForMenu = function(menuItems, itemSelector, activeClass) {
+    menuItems = document.querySelectorAll(itemSelector)
+
+        menuItems.forEach((value, index) =>
+        menuItems[index].addEventListener('click', function() {
+        for(let i=0; i < menuItems.length; i++) {
+           menuItems[i].classList.remove(activeClass)
+        }
+        menuItems[index].classList.add(activeClass)
+    }))}
+
+
+addStateObserverForMenu("mainMenuItems", '.menu_link', 'menu_link_active')
+addStateObserverForMenu("innerMenuItems", '.inner_menu_link', 'inner_menu_link_active')
+addStateObserverForMenu("burgerMenuItems", '.burger_link', 'menu_link_active')
+addStateObserverForMenu("innerBurgerMenuItems", '.inner_burger_link', 'inner_menu_link_active')
+
+/*/Active state for menu*/
+
+/*One listener for 4 Dropdown menu*/
+
 let menu = $("#dropdown_toggle")
 let innermenu = $("#dropdown_inner")
-
-let header = $("#header_inner")
-let main = $("main")
-let footer = $("section")
-
-$(navlink).on("click", function (event) {
-        event.preventDefault();
-        menu.addClass("show")
-        innermenu.addClass("show");
-        event.stopPropagation()
-    })
-
-$(header).on("click", function (event) {
-        event.preventDefault();
-        menu.removeClass("show")
-        innermenu.removeClass("show");
-        burgerMenu.removeClass("toggleburger")
-
-    })
-$(main).on("click", function (event) {
-        event.preventDefault();
-        menu.removeClass("show")
-        innermenu.removeClass("show");
-            burgerMenu.removeClass("toggleburger")
-
-    })
-$(footer).on("click", function (event) {
-        event.preventDefault();
-        menu.removeClass("show")
-        innermenu.removeClass("show");
-        burgerMenu.removeClass("toggleburger")
-        secondBurgerMenu.removeClass("toggleburger")
-    })
+let burgermenu = $("#dropdown_burger")
+let innerburgermenu = $('#dropdown_inner_burger')
 
 
-/* Burger menu*/
+window.addEventListener('click', (event) => {
+   let targetClassList = event.target.classList
 
-let burgerButton = $("#burger_button")
-let burgerMenu = $("#dropdown_burger")
-$(burgerButton).on("click", function (event) {
-        event.preventDefault();
-        burgerMenu.addClass("toggleburger")
-        secondBurgerMenu.removeClass("toggleburger")
-        event.stopPropagation()
-    })
+   if (targetClassList.contains('menu_link_dropdown'))
+    {menu.toggleClass("show")
+    innermenu.toggleClass("show")}
+    else if (targetClassList.contains('dropdown_item')||(targetClassList.contains('show')))
+    {"prevent closing"}
+    else if (targetClassList.contains('burger_line'))
+    {burgermenu.toggleClass("toggleburger")}
+    else if ((targetClassList.contains('dropdown_burger_item'))||(targetClassList.contains('dropdown_burger'))||(targetClassList.contains('dropdown_burger_list')))
+    {"prevent closing"}
+    else if (targetClassList.contains('burger_inner_button'))
+    {innerburgermenu.toggleClass("toggleinnerburger")}
+    else if ((targetClassList.contains('second_dropdown_list'))||(targetClassList.contains('second_dropdown')))
+    {"prevent closing"}
+    else
+    {menu.removeClass("show")
+    innermenu.removeClass("show");
+    burgermenu.removeClass("toggleburger")
+    innerburgermenu.removeClass("toggleinnerburger")}
+})
 
-/* Second Burger menu*/
-
-let secondBurgerButton = $("#second_burger_button")
-let secondBurgerMenu = $("#second_dropdown")
-$(secondBurgerButton).on("click", function (event) {
-    event.preventDefault();
-        secondBurgerMenu.addClass("toggleburger")
-        event.stopPropagation()
-    })
-
+/*/One listener for 4 Dropdown menu*/
 
 /* Slider*/
 
@@ -107,6 +100,8 @@ $(function () {
     });
 });
 
+/*/Slider*/
+
 /* Growing block*/
 
 let button = $("#growing_button")
@@ -117,6 +112,7 @@ $(button).on("click", function (event) {
     button.toggleClass("reverse")
 })
 
+/*/Growing block*/
 
 
 

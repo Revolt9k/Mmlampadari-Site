@@ -13,48 +13,49 @@
     <div class="popup" id="popup">
         <div class="popup_inner" id="popup_inner">
             <div class="popup_content">
-                <h2>Pop Up</h2>
+                <h1>Pop Up</h1>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor doloreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor doloreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor doloreempor dolore </p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor doloreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-            </div> <a id="popup_close" href="" class="popup_close">x</a> </div>
+            </div> <a id="popup_close" href="#" class="popup_close">x</a> </div>
     </div>
     <header class="header">
         <div class="header_inner" id="header_inner">
             <div class="logo">
-                <a href=""><img src="img/logo.png" alt="MM lamardari"></a>
+                <a href="home"><img src="img/logo.png" alt="MM lamardari"></a>
             </div>
             <nav class="nav_group">
                 <div class="popup_group"> <span class="popup_text" id="popup_button">Area Riservata</span> <span class="popup_icon"><img src="img/lock.png" alt=""></span> </div>
-                <nav class="nav"> <span class="nav_item nav_item_acive"> <a href="#1"  >Home</a>  </span>
-                    <div class="nav_item" id="dropdown_link"> <a href="#2">Azienda</a>
+                <nav class="nav"> <span class="nav_item"> <a href="#1" class="menu_link menu_link_active">Home</a>  </span>
+                    <div class="nav_item"> <a class="menu_link menu_link_dropdown" href="#2">Azienda</a>
                         <div class="dropdown" id="dropdown_toggle">
                             <ul class="dropdown_list" id="dropdown_inner">
-                                <li class="dropdown_item"><a href="#3">Storia</a></li>
-                                <li class="dropdown_item dropdown_item_active"><a href="">MM Design</a></li>
-                                <li class="dropdown_item"><a href="">Designer</a></li>
-                                <li class="dropdown_item"><a href="">Certificazioni</a></li>
+                                <li class="dropdown_item"><a class="inner_menu_link" href="#">Storia</a></li>
+                                <li class="dropdown_item"><a class="inner_menu_link inner_menu_link_active" href="#">MM Design</a></li>
+                                <li class="dropdown_item"><a class="inner_menu_link" href="#">Designer</a></li>
+                                <li class="dropdown_item"><a class="inner_menu_link" href="#">Certificazioni</a></li>
                             </ul>
                         </div>
-                    </div> <span class="nav_item"> <a href="">Collezioni</a></span> <span class="nav_item"><a href="">News</a></span> <span class="nav_item"><a href="">Contatti</a></span> </nav>
-                <nav class="burger" id="burger_button">
-                    <div class="burger_item">
+                    </div> <span class="nav_item"> <a class="menu_link" href="#3">Collezioni</a></span> <span class="nav_item"><a class="menu_link" href="#4">News</a></span> <span class="nav_item"><a class="menu_link" href="#5">Contatti</a></span>
+                </nav>
+                <nav class="burger">
+                    <div class="burger_line">
                         <div class="dropdown_burger" id="dropdown_burger">
-                            <ul class="dropdown_burger_list" id="dropdown_burger_inner">
-                                <li class="dropdown_burger_item nav_item_acive"><a href="">Home</a></li>
-                                <li class="dropdown_burger_item " id="second_burger_button"><a href="">Azienda</a>
-                                    <nav class="second_dropdown" id="second_dropdown">
-                                        <ul class="second_dropdown_list">
-                                            <li class="dropdown_item"><a href="">Storia</a></li>
-                                            <li class="dropdown_item second_dropdown_item_active"><a href="">MM Design</a></li>
-                                            <li class="dropdown_item"><a href="">Designer</a></li>
-                                            <li class="dropdown_item"><a href="">Certificazioni</a></li>
+                            <ul class="dropdown_burger_list">
+                                <li class="dropdown_burger_item "><a class="burger_link menu_link_active" href="#1">Home</a></li>
+                                <li class="dropdown_burger_item burger_inner_button"><a class=" burger_inner_button burger_link" href="#2">Azienda</a>
+                                    <nav class="burger_inner_dropdown" id="dropdown_inner_burger">
+                                        <ul class="burger_inner_dropdown_list">
+                                            <li class="dropdown_item"><a class="inner_burger_link" href="#">Storia</a></li>
+                                            <li class="dropdown_item "><a class="inner_burger_link inner_menu_link_active" href="#">MM Design</a></li>
+                                            <li class="dropdown_item"><a class="inner_burger_link" href="#">Designer</a></li>
+                                            <li class="dropdown_item"><a class="inner_burger_link" href="#">Certificazioni</a></li>
                                         </ul>
                                     </nav>
                                 </li>
-                                <li class="dropdown_burger_item"><a href="">Collezioni</a></li>
-                                <li class="dropdown_burger_item"><a href="">News</a></li>
-                                <li class="dropdown_burger_item"><a href="">Contatti</a></li>
+                                <li class="dropdown_burger_item"><a class="burger_link" href="#3">Collezioni</a></li>
+                                <li class="dropdown_burger_item"><a class="burger_link" href="#4">News</a></li>
+                                <li class="dropdown_burger_item"><a class="burger_link" href="#5">Contatti</a></li>
                             </ul>
                         </div>
                     </div>
@@ -86,7 +87,7 @@
         </section>
     </main>
     <footer>
-        <section class="footer">
+        <div class="footer">
             <div class="footer_inner">
                 <article class="footer_item">
                     <h4 class="footer_item_title">Lampadari made in italy</h4>
@@ -100,35 +101,33 @@
                     <h4 class="footer_item_title">45 anni di esperienza</h4>
                     <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
                 </article>
-
-
-                <section class="footer_item subscribe">
+                <fieldset class="footer_item subscribe">
                     <h4 class="footer_item_title">Newsletter</h4>
-                    <form class="footer_form" action="">
+                    <form class="footer_form" action="none">
                         <input class="footer_input" type="text" placeholder="Nome e Cognome">
                         <input class="footer_input" type="text" placeholder="Email">
                         <br>
-                        <input id="footer_checkbox" name="footer_checkbox" class="footer_checkbox" type="checkbox">
-                        <label for="footer_checkbox"><span class="checkbox_text">Acconsento al trattaamento dei dati</span> </label>
+                        <input class="footer_checkbox" type="checkbox">
+                        <label><span class="checkbox_text">Acconsento al trattaamento dei dati</span> </label>
                         <button class="footer_button">Iscriviti</button>
                     </form>
                     <div class="social">
-                        <a href=""><img class="social_icon" src="img/social/fb.png" alt="Facebook"></a>
-                        <a href=""><img class="social_icon" src="img/social/insta.png" alt="Instagram"></a>
-                        <a href=""><img class="social_icon" src="img/social/pinterest.png" alt="Pinterest"></a>
+                        <a href="facebook"><img class="social_icon" src="img/social/fb.png" alt="Facebook"></a>
+                        <a href="instagram"><img class="social_icon" src="img/social/insta.png" alt="Instagram"></a>
+                        <a href="pinterest"><img class="social_icon" src="img/social/pinterest.png" alt="Pinterest"></a>
                     </div>
-                </section>
+                </fieldset>
             </div>
-        </section>
+        </div>
         <section class="bottom_line">
-            <div class="feedback"> <span class="feedback_item">MMLAMPADARI srl</span> <address class="feedback_item">Via Feltrina 00</address> <address class="feedback_item">31111 Pederobba  (TV)</address> <address class="feedback_item">0423.123456</address> <span class="feedback_item"><a href="">info@mmlampadari.mm</a></span> <address class="feedback_item">P.IVA 04123456789</address></div>
-            <div class="languages"> <span class="languages_item">ita</span> <span class="languages_item">eng</span> <span class="languages_item">deu</span> <span class="languages_item">pyc</span> </div>
+            <div class="feedback"> <span class="feedback_item">MMLAMPADARI srl</span> <address class="feedback_item">Via Feltrina 00</address> <address class="feedback_item">31111 Pederobba  (TV)</address> <address class="feedback_item">0423.123456</address> <span class="feedback_item"><a href="email">info@mmlampadari.mm</a></span> <address class="feedback_item">P.IVA 04123456789</address></div>
+            <aside class="languages"> <span class="languages_item">ita</span> <span class="languages_item">eng</span> <span class="languages_item">deu</span> <span class="languages_item">pyc</span> </aside>
         </section>
     </footer>
-
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+    </script>
 </body>
 
 </html>
