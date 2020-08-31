@@ -6,6 +6,8 @@ main {
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    color: #fff;
 }
 
 address {
@@ -40,14 +42,7 @@ fieldset {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-
 /* =================/Normalaze==================== */
-
 
 /*=====================Header=====================*/
 
@@ -166,7 +161,6 @@ a {
     padding: 0 0 0 14px;
 }
 
-
 /*========Dropdown menu===========*/
 
 .dropdown {
@@ -229,9 +223,7 @@ a {
     display: none;
 }
 
-
 /*========/dropdown menu===========*/
-
 
 /*========Burger menu===========*/
 
@@ -311,9 +303,7 @@ a {
     display: none;
 }
 
-
 /*========/burger menu===========*/
-
 
 /*========Burger Dropdown menu===========*/
 
@@ -354,12 +344,9 @@ a {
     transform: translateX(0)
 }
 
-
 /*========/burger Dropdown menu===========*/
 
-
 /*=====================/header=====================*/
-
 
 /*=====================Slider=====================*/
 
@@ -444,9 +431,7 @@ a {
     font-size: 18px;
 }
 
-
 /*=====================/slider=====================*/
-
 
 /*=====================Quotes=====================*/
 
@@ -539,9 +524,7 @@ a {
     color: white;
 }
 
-
 /*=====================/quotes=====================*/
-
 
 /*=====================Footer=====================*/
 
@@ -666,7 +649,7 @@ fieldset {
 .languages {
     display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap;
+
 }
 
 .languages_item {
@@ -686,7 +669,7 @@ fieldset {
     position: absolute;
     content: "";
     margin-left: 10px;
-    height: 100%;
+    height: 16px;
     width: 2px;
     background-color: #fff;
 }
@@ -699,9 +682,7 @@ fieldset {
     color: #fff;
 }
 
-
 /*=====================/footer=====================*/
-
 
 /*=====================Adaptive=====================*/
 
@@ -796,10 +777,7 @@ fieldset {
     .social {
         left: 39%;
     }
-    .radio_text {
-        max-width: 30px;
-        height: auto;
-    }
+
     .bottom_line {
         padding: 80px 20px 20px 20px
     }
@@ -816,6 +794,7 @@ fieldset {
         padding: 0 8px;
     }
     .languages_item {
+       flex-wrap: wrap;
         padding: 2px;
     }
     .languages_item:after {
@@ -853,14 +832,14 @@ fieldset {
     }
 }
 
-
 /*=====================/adaptive=====================*/
 
-
-/*=====================/Crossbrowser support=====================*/
+/*=====================Crossbrowser support=====================*/
 
 @-moz-document url-prefix() {
     .slick-dots li button {
         height: 20px;
     }
 }
+
+/*=====================/crossbrowser support=====================*/

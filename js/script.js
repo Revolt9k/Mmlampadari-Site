@@ -5,7 +5,6 @@ let popup = $("#popup")
 let popupInner = $("#popup_inner")
 let popupClose = $("#popup_close")
 
-
 $(popupbutton).on("click", function (event) {
     event.preventDefault();
     popup.toggleClass("open")
@@ -41,13 +40,12 @@ let addStateObserverForMenu = function(menuItems, itemSelector, activeClass) {
         menuItems[index].classList.add(activeClass)
     }))}
 
-
 addStateObserverForMenu("mainMenuItems", '.menu_link', 'menu_link_active')
 addStateObserverForMenu("innerMenuItems", '.inner_menu_link', 'inner_menu_link_active')
 addStateObserverForMenu("burgerMenuItems", '.burger_link', 'menu_link_active')
 addStateObserverForMenu("innerBurgerMenuItems", '.inner_burger_link', 'inner_menu_link_active')
 
-/*/Active state for menu*/
+/*/active state for menu*/
 
 /*One listener for 4 Dropdown menu*/
 
@@ -56,11 +54,10 @@ let innermenu = $("#dropdown_inner")
 let burgermenu = $("#dropdown_burger")
 let innerburgermenu = $('#dropdown_inner_burger')
 
-
 window.addEventListener('click', (event) => {
-   let targetClassList = event.target.classList
+    let targetClassList = event.target.classList
 
-   if (targetClassList.contains('menu_link_dropdown'))
+    if (targetClassList.contains('menu_link_dropdown'))
     {menu.toggleClass("show")
     innermenu.toggleClass("show")}
     else if (targetClassList.contains('dropdown_item')||(targetClassList.contains('show')))
@@ -80,7 +77,7 @@ window.addEventListener('click', (event) => {
     innerburgermenu.removeClass("toggleinnerburger")}
 })
 
-/*/One listener for 4 Dropdown menu*/
+/*/one listener for 4 Dropdown menu*/
 
 /* Slider*/
 
@@ -100,7 +97,7 @@ $(function () {
     });
 });
 
-/*/Slider*/
+/*/slider*/
 
 /* Growing block*/
 
@@ -112,8 +109,4 @@ $(button).on("click", function (event) {
     button.toggleClass("reverse")
 })
 
-/*/Growing block*/
-
-
-
-
+/*/growing block*/
