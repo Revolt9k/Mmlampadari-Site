@@ -29,8 +29,8 @@ $(popup).on("click", function (event) {
 
 /*Active state for menu */
 
-let addStateObserverForMenu = function(menuItems, itemSelector, activeClass) {
-    menuItems = document.querySelectorAll(itemSelector)
+let addStateObserverForMenu = function(itemSelector, activeClass) {
+    let menuItems = document.querySelectorAll(itemSelector)
 
         menuItems.forEach((value, index) =>
         menuItems[index].addEventListener('click', function() {
@@ -40,10 +40,10 @@ let addStateObserverForMenu = function(menuItems, itemSelector, activeClass) {
         menuItems[index].classList.add(activeClass)
     }))}
 
-addStateObserverForMenu("mainMenuItems", '.menu_link', 'menu_link_active')
-addStateObserverForMenu("innerMenuItems", '.inner_menu_link', 'inner_menu_link_active')
-addStateObserverForMenu("burgerMenuItems", '.burger_link', 'menu_link_active')
-addStateObserverForMenu("innerBurgerMenuItems", '.inner_burger_link', 'inner_menu_link_active')
+addStateObserverForMenu('.menu_link', 'menu_link_active')
+addStateObserverForMenu('.inner_menu_link', 'inner_menu_link_active')
+addStateObserverForMenu('.burger_link', 'menu_link_active')
+addStateObserverForMenu('.inner_burger_link', 'inner_menu_link_active')
 
 /*/active state for menu*/
 
@@ -53,6 +53,7 @@ let menu = $("#dropdown_toggle")
 let innermenu = $("#dropdown_inner")
 let burgermenu = $("#dropdown_burger")
 let innerburgermenu = $('#dropdown_inner_burger')
+let burgerButton = $('#burger_line')
 
 window.addEventListener('click', (event) => {
     let targetClassList = event.target.classList
@@ -63,7 +64,8 @@ window.addEventListener('click', (event) => {
     else if (targetClassList.contains('dropdown_item')||(targetClassList.contains('show')))
     {"prevent closing"}
     else if (targetClassList.contains('burger_line'))
-    {burgermenu.toggleClass("toggleburger")}
+    {burgermenu.toggleClass("toggleburger")
+     burgerButton.toggleClass("burger_line_animate")}
     else if ((targetClassList.contains('dropdown_burger_item'))||(targetClassList.contains('dropdown_burger'))||(targetClassList.contains('dropdown_burger_list')))
     {"prevent closing"}
     else if (targetClassList.contains('burger_inner_button'))
@@ -74,7 +76,8 @@ window.addEventListener('click', (event) => {
     {menu.removeClass("show")
     innermenu.removeClass("show");
     burgermenu.removeClass("toggleburger")
-    innerburgermenu.removeClass("toggleinnerburger")}
+    innerburgermenu.removeClass("toggleinnerburger")
+    burgerButton.removeClass("burger_line_animate")}
 })
 
 /*/one listener for 4 Dropdown menu*/

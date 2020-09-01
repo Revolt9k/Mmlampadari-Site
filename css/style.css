@@ -243,6 +243,8 @@ fieldset {
     background-color: #fff;
     position: relative;
     border-radius: 15px;
+    transition: all .3s ease-in
+
 }
 
 .burger_line:before,
@@ -253,8 +255,9 @@ fieldset {
     position: absolute;
     left: 0;
     z-index: 1;
-    background-color: #fff;
+    background-color: #e2d1a6;
     border-radius: 15px;
+    transition: all .3s ease-in
 }
 
 .burger_line:before {
@@ -265,12 +268,31 @@ fieldset {
     bottom: -8px;
 }
 
+.burger_line_animate.burger_line {
+    height: 0;
+}
+
+.burger_line_animate.burger_line:before, 
+.burger_line_animate.burger_line:after {
+    height: 6px;
+} 
+
+.burger_line_animate.burger_line:before {
+    top: -3px;
+    transform: rotate(-45deg)
+} 
+.burger_line_animate.burger_line:after {
+    bottom: -3px;
+    transform: rotate(45deg)
+} 
+
+
 .dropdown_burger {
     transform: translateY(-100px);
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    left: -79px;
+    left: -83px;
     top: 45px;
     z-index: 6;
     background-color: #353436;
@@ -335,7 +357,7 @@ fieldset {
 .toggleburger {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 .toggleinnerburger {
@@ -343,6 +365,8 @@ fieldset {
     opacity: 1;
     transform: translateX(0)
 }
+
+
 
 /*========/burger Dropdown menu===========*/
 
