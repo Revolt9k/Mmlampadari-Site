@@ -70,7 +70,7 @@ window.addEventListener('click', (event) => {
     {"prevent closing"}
     else if (targetClassList.contains('burger_inner_button'))
     {innerburgermenu.toggleClass("toggleinnerburger")}
-    else if ((targetClassList.contains('second_dropdown_list'))||(targetClassList.contains('second_dropdown')))
+    else if ((targetClassList.contains('burger_inner_dropdown'))||(targetClassList.contains('burger_inner_dropdown_list')))
     {"prevent closing"}
     else
     {menu.removeClass("show")
