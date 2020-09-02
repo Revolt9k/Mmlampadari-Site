@@ -10,6 +10,10 @@ a {
     color: #fff;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 address {
     font-style: normal;
 }
@@ -52,10 +56,11 @@ fieldset {
 }
 
 .header_inner {
-    margin: 0 20px;
-    height: 130px;
     display: flex;
     justify-content: space-between;
+    height: 130px;
+    margin: 0 20px;
+
 }
 
 .logo {
@@ -65,9 +70,9 @@ fieldset {
 }
 
 .nav_group {
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
 }
 
 .popup_group {
@@ -87,48 +92,49 @@ fieldset {
 }
 
 .popup {
-    display: flex;
-    transition: all .5s ease 0s;
-    opacity: 0;
-    visibility: hidden;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    z-index: 5;
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .8);
+    transition: all .5s ease 0s;
 }
 
 .popup_inner {
-    transition: all .5s ease 0s;
     display: flex;
     justify-content: space-between;
-    padding: 30px;
-    min-width: 40%;
     max-width: 90%;
-    min-height: 40%;
     max-height: 90%;
+    min-width: 40%;
+    min-height: 40%;
+    padding: 30px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: rgba(200, 200, 200, 1);
     transform: translateY(-200%);
+    background-color: rgba(200, 200, 200, 1);
+    transition: all .5s ease 0s;
+
 }
 
 .popup_content {
-    color: #333;
     font-size: 25px;
+    color: #333;
 }
 
 .popup_close {
-    color: #fff;
     font-size: 30px;
+    color: #fff;
     text-decoration: none;
 }
 
 .open {
+    visibility: visible;
     opacity: 1;
-    visibility: visible
 }
 
 .move {
@@ -136,21 +142,18 @@ fieldset {
 }
 
 .nav {
-    font-size: 18px;
-    height: 100%;
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
+    height: 100%;
     margin-bottom: 23px;
+    font-size: 18px;
+
 }
 
 .nav_item {
     position: relative;
     padding: 0 14px;
-}
-
-.nav_item:hover {
-    text-decoration: underline;
 }
 
 .menu_link_active {
@@ -164,15 +167,15 @@ fieldset {
 /*========Dropdown menu===========*/
 
 .dropdown {
-    opacity: 0;
-    visibility: hidden;
+    position: absolute;
     min-width: 150px;
     min-height: 155px;
+    opacity: 0;
+    visibility: hidden;
+    left: -5px;
     font-size: 16px;
     z-index: 1;
     background-color: #353436;
-    position: absolute;
-    left: -5px;
     transition: all .2s linear;
 }
 
@@ -182,39 +185,35 @@ fieldset {
 }
 
 .dropdown_list {
+    transform: translateY(-100px);
     opacity: 0;
     padding: 12px 0 0 12px;
     list-style: none;
     transition: all .2s linear;
-    transform: translateY(-100px)
 }
 
 .dropdown_list.show {
+    transform: translateY(0);
     opacity: 1;
-    transform: translateY(0)
 }
 
 .dropdown_item {
+    position: relative;
     margin: 0 5px;
     padding-top: 10px;
-    position: relative;
 }
 
 .dropdown_item_active a {
     color: #b4a788;
 }
 
-.dropdown_item:hover {
-    text-decoration: underline;
-}
-
 .dropdown_item::after {
-    bottom: -5px;
-    left: -8px;
     content: "";
+    position: absolute;
     width: 105%;
     height: 1px;
-    position: absolute;
+    bottom: -5px;
+    left: -8px;
     z-index: 1;
     background-color: white
 }
@@ -228,20 +227,20 @@ fieldset {
 /*========Burger menu===========*/
 
 .burger {
-    cursor: pointer;
     display: none;
     justify-content: flex-end;
     margin: 50px 0 0 0;
-    border: 0;
     padding: 9px 2px;
+    border: 0;
+    cursor: pointer;
 }
 
 .burger_line {
+    position: relative;
     display: block;
     width: 30px;
     height: 6px;
     background-color: #fff;
-    position: relative;
     border-radius: 15px;
     transition: all .3s ease-in
 
@@ -250,9 +249,9 @@ fieldset {
 .burger_line:before,
 .burger_line:after {
     content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
     left: 0;
     z-index: 1;
     background-color: #e2d1a6;
@@ -272,26 +271,26 @@ fieldset {
     height: 0;
 }
 
-.burger_line_animate.burger_line:before, 
+.burger_line_animate.burger_line:before,
 .burger_line_animate.burger_line:after {
     height: 6px;
-} 
+}
 
 .burger_line_animate.burger_line:before {
+    transform: rotate(-45deg);
     top: -3px;
-    transform: rotate(-45deg)
-} 
-.burger_line_animate.burger_line:after {
-    bottom: -3px;
-    transform: rotate(45deg)
-} 
+}
 
+.burger_line_animate.burger_line:after {
+    transform: rotate(45deg);
+    bottom: -3px;
+}
 
 .dropdown_burger {
+    position: absolute;
     transform: translateY(-100px);
     opacity: 0;
     visibility: hidden;
-    position: absolute;
     left: -83px;
     top: 45px;
     z-index: 6;
@@ -306,17 +305,17 @@ fieldset {
 }
 
 .dropdown_burger_item {
-    margin: 10px 0;
     position: relative;
+    margin: 10px 0;
 }
 
 .dropdown_burger_item:after {
-    bottom: -5px;
-    left: -8px;
     content: "";
+    position: absolute;
     width: 105%;
     height: 1px;
-    position: absolute;
+    bottom: -5px;
+    left: -8px;
     z-index: 1;
     background-color: #fff;
 }
@@ -330,19 +329,20 @@ fieldset {
 /*========Burger Dropdown menu===========*/
 
 .burger_inner_dropdown {
-    border-right: 1px solid black;
-    transition: all .2s linear;
+    position: absolute;
     visibility: hidden;
-    transform: translateX(100px);
     opacity: 0;
     min-width: 150px;
     min-height: 155px;
+    top: -8px;
+    left: -170px;
+    transform: translateX(100px);
     font-size: 16px;
     z-index: 7;
     background-color: #353436;
-    position: absolute;
-    top: -8px;
-    left: -170px;
+    border-right: 1px solid black;
+    transition: all .2s linear;
+
 }
 
 .inner_menu_link_active {
@@ -365,8 +365,6 @@ fieldset {
     opacity: 1;
     transform: translateX(0)
 }
-
-
 
 /*========/burger Dropdown menu===========*/
 
@@ -399,14 +397,14 @@ fieldset {
 }
 
 .slick-dots {
+    position: absolute;
     display: flex;
     justify-content: center;
+    width: 100%;
     margin: 0;
     padding: 0;
-    list-style: none;
-    width: 100%;
-    position: absolute;
     bottom: 39px;
+    list-style: none;
     z-index: 2;
 }
 
@@ -415,13 +413,13 @@ fieldset {
 }
 
 .slick-dots button {
-    background: #fff;
-    border-radius: 50%;
     width: 15px;
     height: 15px;
-    border: 2px solid #000;
     font-size: 0;
     cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #000;
 }
 
 .slick-dots button:focus {
@@ -433,14 +431,14 @@ fieldset {
 }
 
 .gallery_info {
-    z-index: 2;
-    padding: 0px 20px 15px 15px;
     position: absolute;
     width: 510px;
     min-height: 140px;
+    padding: 0px 20px 15px 15px;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
     background-color: rgba(255, 255, 255, .5)
 }
 
@@ -460,14 +458,14 @@ fieldset {
 /*=====================Quotes=====================*/
 
 .quotes {
-    margin: 0 20px;
-    z-index: 4;
-    max-height: 323px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: stretch;
+    max-height: 323px;
+    margin: 0 20px;
     bottom: 0;
+    z-index: 4;
     transition: all .4s linear;
 }
 
@@ -482,8 +480,8 @@ fieldset {
 
 .quotes_item {
     position: relative;
-    padding: 0 15px 5px 15px;
     width: 33.33333%;
+    padding: 0 15px 5px 15px;
     background-color: #fff;
 }
 
@@ -497,14 +495,14 @@ fieldset {
 }
 
 .quotes_button {
+    position: relative;
+    height: 30px;
+    width: 85px;
     left: 50%;
+    bottom: 30px;
     transform: translateX(-50%);
     cursor: pointer;
     border: none;
-    position: relative;
-    bottom: 30px;
-    height: 30px;
-    width: 85px;
     background-color: #fff;
 }
 
@@ -537,8 +535,8 @@ fieldset {
 }
 
 .quotes_item_author {
-    transition: all .1s linear;
     position: absolute;
+    transition: all .1s linear;
     bottom: 12px;
     right: 22px;
 }
@@ -553,16 +551,16 @@ fieldset {
 /*=====================Footer=====================*/
 
 .footer {
-    min-height: 215px;
     display: flex;
     justify-content: center;
+    min-height: 215px;
     background-color: #353436;
 }
 
 .footer_inner {
-    width: 75%;
     display: flex;
     justify-content: center;
+    width: 75%;
 }
 
 fieldset {
@@ -618,11 +616,11 @@ fieldset {
 }
 
 .footer_button {
+    width: 185px;
+    height: 32px;
     border: none;
     background-color: #000;
     color: white;
-    width: 185px;
-    height: 32px;
     text-transform: uppercase;
     transition: all .4s linear;
 }
@@ -667,7 +665,6 @@ fieldset {
 
 .feedback_item a {
     color: #939394;
-    text-decoration: none;
 }
 
 .languages {
@@ -677,10 +674,10 @@ fieldset {
 }
 
 .languages_item {
+    position: relative;
+    padding: 0 10px;
     cursor: pointer;
     font-size: 14px;
-    padding: 0 10px;
-    position: relative;
     color: #c9c9c9;
     text-transform: uppercase;
 }
@@ -692,9 +689,9 @@ fieldset {
 .languages_item::after {
     position: absolute;
     content: "";
-    margin-left: 10px;
     height: 16px;
     width: 2px;
+    margin-left: 10px;
     background-color: #fff;
 }
 
@@ -763,8 +760,8 @@ fieldset {
 
 @media (max-width: 680px) {
     .gallery_info {
-        top: 45%;
         max-width: 100%;
+        top: 45%;
         padding: 0 0 0 10px;
     }
     .quotes {
