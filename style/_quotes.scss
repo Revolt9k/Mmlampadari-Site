@@ -1,0 +1,93 @@
+.quotes {
+    position: absolute;
+    @include flex(center);
+    align-items: stretch;
+    max-height: 323px;
+    margin: 0 20px;
+    bottom: 0;
+    z-index: 4;
+    transition: all .4s linear;
+}
+
+.hidden {
+    max-height: 0;
+}
+
+.quotes.hidden {
+    .quotes_item_author {
+        opacity: 0;
+        font-size: 0;
+    } 
+} 
+
+.quotes_item {
+    position: relative;
+    width: 33.33333%;
+    padding: 0 15px 5px 15px;
+    background-color: #fff;
+}
+
+.quotes_item_first {
+    background-color: $activeNavColor;
+}
+
+.quotes_item_last {
+    color: white;
+    background-color: #010101;
+}
+
+.quotes_button {
+    position: relative;
+    height: 30px;
+    width: 85px;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+
+.quotes_button:focus {
+    outline: none;
+}
+
+.quotes_button {
+    img {
+        transition: all .2s linear;
+    }
+} 
+
+.reverse {
+    img {
+        transform: scale(-1, -1)
+    }
+} 
+
+.quotes_title_main {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    margin: -6px 0 0 0;
+}
+
+.quotes_title {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    margin: 20px 0;
+}
+
+.quotes_item_text {
+    margin: 16px 0 42px 0;
+}
+
+.quotes_item_author {
+    position: absolute;
+    transition: all .1s linear;
+    bottom: 12px;
+    right: 22px;
+}
+
+.quotes_item_author_first {
+    text-decoration: underline;
+    color: white;
+}

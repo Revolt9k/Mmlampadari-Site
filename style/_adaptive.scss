@@ -1,0 +1,151 @@
+@media (max-width: 4000px) {
+    .quotes_title {
+        font-size: 38px;
+    }
+    .quotes_title_main {
+        font-size: 38px;
+    }
+    .quotes_item_text {
+        font-size: 34px;
+    }
+    .quotes_item_author {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .quotes_title {
+        font-size: 28px;
+    }
+    .quotes_title_main {
+        font-size: 28px;
+    }
+    .quotes_item_text {
+        font-size: 18px;
+    }
+    .quotes_item_author {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+    .quotes_title {
+        font-size: 18px;
+    }
+    .quotes_title_main {
+        font-size: 18px;
+    }
+    .quotes_item_text {
+        font-size: 16px;
+    }
+    .quotes_item_author {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 680px) {
+    .gallery_info {
+        max-width: 100%;
+        top: 45%;
+        padding: 0 0 0 10px;
+    }
+    .quotes {
+        margin: 0;
+    }
+    .quotes_item {
+        padding: 0 10px 5px 10px
+    }
+    .quotes_title {
+        font-size: 16px;
+    }
+    .quotes_title_main {
+        font-size: 16px;
+    }
+    .quotes_item_text {
+        font-size: 14px;
+    }
+    .quotes_item_author {
+        font-size: 12px;
+    }
+    .footer_inner {
+        flex-wrap: wrap;
+    }
+    .footer_item {
+        width: 100%;
+        margin: 0 5px;
+    }
+    .footer_form {
+        width: auto;
+    }
+    .subscribe {
+        text-align: center;
+    }
+    .social {
+        left: 39%;
+    }
+
+    .bottom_line {
+        padding: 80px 20px 20px 20px
+    }
+}
+
+@media (max-width: 525px) {
+    .gallery_info_title {
+        font-size: 20px;
+    }
+    .gallery_info_text {
+        font-size: 14px;
+    }
+    .feedback_item:first-child {
+        padding: 0 8px;
+    }
+    .languages_item {
+       flex-wrap: wrap;
+        padding: 2px;
+    }
+    .languages_item:after {
+        display: none;
+    }
+    .languages_item:last-child {
+        padding: 2px;
+    }
+    .footer_input:first-child {
+        margin-left: -5px;
+    }
+}
+
+@media (max-width: 465px) {
+    .logo {
+        width: 100%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .quotes_item {
+        padding: 0 5px 5px 5px
+    }
+    .quotes_title {
+        font-size: 16px;
+    }
+    .quotes_title_main {
+        font-size: 16px;
+    }
+    .quotes_item_text {
+        font-size: 12px;
+    }
+    .quotes_item_author {
+        font-size: 10px;
+    }
+}
+
+@-moz-document url-prefix() {
+    .slick-dots li button {
+        height: 20px;
+    }
+}

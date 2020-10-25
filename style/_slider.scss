@@ -1,0 +1,89 @@
+.gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.slick-slide {
+    height: 82vh;
+}
+
+.first_slide {
+    background: url(../img/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.second_slide {
+    background: url(../img/bg2.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.third_slide {
+    background: url(../img/bg3.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.slick-dots {
+    position: absolute;
+    @include flex(center);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    bottom: 39px;
+    list-style: none;
+    z-index: 2;
+}
+
+.slick-dots {
+    li {
+        margin: 0 5px;
+    }
+} 
+
+.slick-dots {
+    button {
+        width: 15px;
+        height: 15px;
+        font-size: 0;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 50%;
+        border: 2px solid #000;
+    }
+} 
+
+.slick-dots {
+    button:focus {
+    outline: 0;
+    }
+}
+
+.slick-dots {
+    .slick-active {
+        button {
+            background:$activeNavColor;
+        }
+    } 
+} 
+
+.gallery_info {
+    position: absolute;
+    width: 510px;
+    min-height: 140px;
+    padding: 0px 20px 15px 15px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, .5)
+}
+
+.gallery_info_title {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.gallery_info_text {
+    font-size: 18px;
+}

@@ -1,0 +1,57 @@
+@import './variables';
+@import './header';
+@import './dropdownMenu';
+@import './burgerMenu';
+@import './burgerDropdownMenu';
+@import './slider';
+@import './quotes';
+@import './footer';
+@import './adaptive';
+
+/* =============Normalaze CSS================== */
+
+main {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+[type="button"] {
+    -webkit-appearance: button;
+}
+
+html,
+body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+fieldset {
+    padding: 0;
+}

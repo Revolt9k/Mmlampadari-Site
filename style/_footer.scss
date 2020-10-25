@@ -1,0 +1,150 @@
+.footer {
+    @include flex(center);
+    min-height: 215px;
+    background-color: $primaryColor;
+}
+
+.footer_inner {
+    @include flex(center);
+    width: 75%;
+}
+
+fieldset {
+    border: none;
+}
+
+.footer_item {
+    width: 25%;
+    margin: 0 30px;
+}
+
+.footer_item_title {
+    margin: 38px 0 26px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #a0a0a0;
+}
+
+.footer_text {
+    font-size: 12px;
+    color: #8a898a;
+}
+
+.footer_form {
+    position: relative;
+    width: 185px;
+}
+
+.footer_input {
+    width: 185px;
+    height: 32px;
+    outline: none;
+}
+
+.footer_input:first-child {
+    margin-bottom: 12px;
+}
+
+.footer_input::placeholder {
+    font-size: 14px;
+}
+
+.footer_checkbox {
+    margin: 10px 0;
+}
+
+.checkbox_text {
+    position: relative;
+    color: $footerBtnColor;
+    font-size: 10px;
+    top: -2px;
+}
+
+.footer_button {
+    width: 185px;
+    height: 32px;
+    border: none;
+    background-color: #000;
+    color: white;
+    text-transform: uppercase;
+    transition: all .4s linear;
+}
+
+.footer_button:hover {
+    background-color:$footerBtnColor;
+}
+
+.social {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social_icon {
+    margin-top: 23px;
+    padding-right: 10px;
+}
+
+.bottom_line {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 20px 20px;
+    background-color: $primaryColor;
+}
+
+.feedback {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.feedback_item:first-child {
+    padding: 0 8px 0 0;
+}
+
+.feedback_item {
+    font-size: 12px;
+    padding: 0 8px;
+    color: $feedbackItemColor;
+}
+
+.feedback_item a {
+    color: $feedbackItemColor;
+}
+
+.languages {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.languages_item {
+    position: relative;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #c9c9c9;
+    text-transform: uppercase;
+}
+
+.languages_item:last-child {
+    padding: 0 0 0 10px;
+}
+
+.languages_item::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 2px;
+    margin-left: 10px;
+    background-color: #fff;
+}
+
+.languages_item:last-child::after {
+    display: none;
+}
+
+.languages_item:hover {
+    color: #fff;
+}

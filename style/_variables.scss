@@ -1,0 +1,11 @@
+$primaryColor:#353436;
+$activeNavColor: #e2d1a6;
+$secondaryNavColor: #b4a788;
+$feedbackItemColor: #939394;
+$footerBtnColor: #b5b4b4;
+
+
+@mixin flex($justify) {
+    display: flex;
+    justify-content: $justify;
+}
